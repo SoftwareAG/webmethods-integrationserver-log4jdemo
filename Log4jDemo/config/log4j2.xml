@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><Configuration monitorInterval="30">
+<Appenders>
+		<RollingFile fileName="./logs/Log4jDemo.log" filePattern="logs/Log4jDemo.log.%d{yyyyMMdd}" name="Log4jDemo">
+			<PatternLayout>
+				<pattern>%d %-5p - %m%n</pattern>
+			</PatternLayout>
+			<Policies>
+				<TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+			</Policies>
+		</RollingFile>
+		 <Null name="Null"/>
+	</Appenders>
+	<Loggers>
+			
+		<Logger additivity="false" level="Info" name="InfoLogger">
+				<AppenderRef ref="Log4jDemo"/>
+		</Logger>
+		<Logger additivity="false" level="Error" name="ErrorLogger">
+			<AppenderRef ref="Log4jDemo"/>
+		</Logger>
+			
+	</Loggers>
+</Configuration>
