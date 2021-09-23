@@ -1,4 +1,4 @@
-# Log4Demo
+# Log4j Demo for Integration Server
 
 Since v10.5 Integration Server ships with Apache Log4j v2. This has caused issues with
 some custom logging solutions, which rely on Log4j's default mechanism to find and process
